@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="styles.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet">
+</head>
+<body>
+  <a href="index.html">Home</a>
+  <div class="flex-container">
+    <div id="gamePanel">
+      <div>
+        <p id="player_box">
+          <span id="current_player">Player 1's turn</span>
+          <span id="turn_clock">Time Kills ALL</span>
+        </p>
+      </div>
+      <div>
+        <canvas id='our_canvas' width="600" height="600"></canvas>
+      </div>
+    </div>
+    <div id="gamePanel2">
+      <div id="firstPlayer">
+        <p id="player1">P1</p>
+        <p>Captures: <span id="player1_captures"> 0</span></p>
+        <p>Call Outs: <span id="player1_callouts"></span></p>
+      </div>
+      <div id="secondPlayer">
+        <p id="player2">P2</p>
+        <p>Captures: <span id="player2_captures"> 0</span></p>
+        <p>Call Outs: <span id="player2_callouts"></span></p>
+      </div>
+      <div id="saveBox">
+          <input type="text" placeholder="Game File Name" id="sGame"/>
+          <br/>
+          <button id="saveGame" onclick="SaveGame()">Save Game</button>
+        </div>
+        <div id="loadBox2">
+          <input type="file" placeholder="Game File Name" id="lGame"/>
+          <br/>
+          <button id="loadGame" onclick="Onclick_LoadGame()">Load Game</button>
+        </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

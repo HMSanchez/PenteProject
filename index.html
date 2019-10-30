@@ -1,0 +1,62 @@
+<!Doctype html>
+<html>
+<head>
+  <link href='styles.css' rel='stylesheet' />
+  <link href="https://fonts.googleapis.com/css?family=Aladin" rel="stylesheet">
+</head>
+<body>
+  <div id='mainPanel'>
+    <div id="indexPanel">
+      <div id='homeTitleBar'>
+        <h1>Welcome to Pente</h1>
+      </div>
+      <form name="myForm" onsubmit="return onSubmit()">
+        <div id="gameType_Selection">
+          <p>
+            <input type="radio" name="gameType" id="gameType_PvP" value="PvP" /> PvP</p>
+          <p>
+            <input type="radio" name="gameType" id="gameType_PvC" value="PvC" checked/> PvC</p>
+        </div>
+        <p>Player 1:
+          <input type="text" placeholder="Player 1" id="player1Name" autocomplete="off"/>
+        </p>
+        <p id="player2">Player 2:
+          <input type="text" placeholder="Player 2" id="player2Name" autocomplete="off"/>
+        </p>
+        <div id="gridSelect">
+          <p id="gridLabel">Grid Dimesions</p>
+          <p id="sliderBox">
+            <input type="range" list="tickmarks" min="9" max="39" step="2" id="slider" value="19"/>
+            <datalist id="tickmarks">
+              <option value="9"/>
+              <option value="11"/>
+              <option value="13"/>
+              <option value="15"/>
+              <option value="17"/>
+              <option value="19"/>
+              <option value="21"/>
+              <option value="23"/>
+              <option value="25"/>
+              <option value="27"/>
+              <option value="29"/>
+              <option value="31"/>
+              <option value="33"/>
+              <option value="35"/>
+              <option value="37"/>
+              <option value="39"/>
+            </datalist>
+          </p>
+          <p id="sliderValue"></p>
+        </div>
+        <input type="submit" value="Start Game" class="btn"/>
+      </form>
+    </div>
+    <div id="loadBox">
+      <input type="file" placeholder="Game File" id="game"/>
+      <br/>
+      <button id="loadGame" onclick="Onclick_LoadGame()">Load</button>
+    </div>
+  </div>
+  <script src='form.js'></script>
+</body>
+</html>
